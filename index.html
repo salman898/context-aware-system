@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <title>Weather app</title>
+    <head>
+        <link rel="stylesheet" href ="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google map scrip tag -->
+        <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvq33M0RmCwJiaVRotNMxAFIOjGvEaUrI&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!-- google sign-in script tag -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="107362585837-tviaam6oc08r8gguidh99cj7r5l685k5.apps.googleusercontent.com">
+    </head>
+
+    <body>
+        <!-- from here google maps api start -->
+        <h1>GOOGLE MAP API</h1>
+        <hr>
+        <br/>
+        <div id="map1"></div>
+        
+        
+        <!-- from here google maps api End -->
+        <h1>Weather API</h1>
+        <hr>
+        <form id="search-form">
+            <input type="search"
+            placeholder="Enter City Name"
+            id="search-input"
+            required
+            autocomplete="off"
+            />
+            <br>
+        </br>
+        <button id="search-button">Search</button>
+
+        </form>
+
+
+        <main id="app-container">
+            <div id="location">
+                <p>-------</p>
+            </div>
+                <div id="temp">
+                    <img id="temp-icon" src="./icons/sun.svg" alt="">
+                    <p><span id="temp-value">-----</span> <span id="temp-unit" >&#176c</span> </p>
+                </div>
+
+                <div id="climate">
+                    <p>------</p>
+                </div>
+
+        </main>
+        <!-- from here Google sign -->
+        <h1>Sign-in Api</h1>
+    <hr>
+    <br/>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<script src="script.js">
+
+</script>
+    </body>
+
+</html>
